@@ -9565,7 +9565,7 @@
 											"parentStyle": true,
 											"left": 53,
 											"top": 837,
-											"width": 87.72802734375,
+											"width": 117.34619140625,
 											"height": 13,
 											"text": "«enumeration»"
 										},
@@ -9579,7 +9579,7 @@
 											"parentStyle": true,
 											"left": 53,
 											"top": 852,
-											"width": 87.72802734375,
+											"width": 117.34619140625,
 											"height": 13,
 											"text": "TypeEvento"
 										},
@@ -9613,7 +9613,7 @@
 									"parentStyle": true,
 									"left": 48,
 									"top": 832,
-									"width": 97.72802734375,
+									"width": 127.34619140625,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGc0cAnbioF7HY="
@@ -9697,12 +9697,68 @@
 									"model": {
 										"$ref": "AAAAAAGc0cAnbioB5fY="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGc0cWckTruNjA=",
+											"_parent": {
+												"$ref": "AAAAAAGc0cAnbioNkRM="
+											},
+											"model": {
+												"$ref": "AAAAAAGc0cWchTrBI78="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 53,
+											"top": 875,
+											"width": 117.34619140625,
+											"height": 13,
+											"text": "DiminuisciVIta",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGc0cbIuz6RfO8=",
+											"_parent": {
+												"$ref": "AAAAAAGc0cAnbioNkRM="
+											},
+											"model": {
+												"$ref": "AAAAAAGc0cbItT5kdV4="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 53,
+											"top": 890,
+											"width": 117.34619140625,
+											"height": 13,
+											"text": "IncontraNemico",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGc0cbxhkBmtUY=",
+											"_parent": {
+												"$ref": "AAAAAAGc0cAnbioNkRM="
+											},
+											"model": {
+												"$ref": "AAAAAAGc0cbxdUA55Hc="
+											},
+											"font": "Arial;13;0",
+											"parentStyle": true,
+											"left": 53,
+											"top": 905,
+											"width": 117.34619140625,
+											"height": 13,
+											"text": "TrovaOggetto",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"parentStyle": true,
 									"left": 48,
 									"top": 870,
-									"width": 97.72802734375,
-									"height": 10
+									"width": 127.34619140625,
+									"height": 53
 								}
 							],
 							"font": "Arial;13;0",
@@ -9710,8 +9766,8 @@
 							"containerChangeable": true,
 							"left": 48,
 							"top": 832,
-							"width": 96.72802734375,
-							"height": 48,
+							"width": 126.34619140625,
+							"height": 91,
 							"nameCompartment": {
 								"$ref": "AAAAAAGc0cAnbioEHwo="
 							},
@@ -11167,7 +11223,33 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "TypeEvento"
+					"name": "TypeEvento",
+					"literals": [
+						{
+							"_type": "UMLEnumerationLiteral",
+							"_id": "AAAAAAGc0cWchTrBI78=",
+							"_parent": {
+								"$ref": "AAAAAAGc0cAnbioB5fY="
+							},
+							"name": "DiminuisciVIta"
+						},
+						{
+							"_type": "UMLEnumerationLiteral",
+							"_id": "AAAAAAGc0cbItT5kdV4=",
+							"_parent": {
+								"$ref": "AAAAAAGc0cAnbioB5fY="
+							},
+							"name": "IncontraNemico"
+						},
+						{
+							"_type": "UMLEnumerationLiteral",
+							"_id": "AAAAAAGc0cbxdUA55Hc=",
+							"_parent": {
+								"$ref": "AAAAAAGc0cAnbioB5fY="
+							},
+							"name": "TrovaOggetto"
+						}
+					]
 				}
 			]
 		}
