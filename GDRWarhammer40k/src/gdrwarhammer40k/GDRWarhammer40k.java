@@ -14,7 +14,10 @@ public class GDRWarhammer40k {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Character t = new Terminator();
+        t.addArma(new Weapon(3, "FireGun"));
+        System.out.print(t.outPut());
+        System.out.print("\n" + t.attacca());
     }
     
 }
