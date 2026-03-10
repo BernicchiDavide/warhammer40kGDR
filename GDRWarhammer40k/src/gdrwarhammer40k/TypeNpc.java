@@ -8,11 +8,6 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public class Terminator extends Character{
-    Terminator(Weapon a, Armor art){
-        super(a,art);
-        classe = "Terminator";
-        atributoClasseFireGun = 3; 
-        atributoClasseMelee = 0;
-    }
+public enum TypeNpc {
+    Tiranidi, ChaosMarine, Necron  
 }

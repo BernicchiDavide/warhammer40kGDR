@@ -16,6 +16,10 @@ public class Character {
     int atributoClasseMelee;
     int atributoClasse;
     
+    Character(Weapon arm, Armor armt){
+        addArma(arm);
+        addArmatura(armt);
+    }
     
     void addArma(Weapon w){
         arma = w;

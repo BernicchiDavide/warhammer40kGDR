@@ -25,15 +25,15 @@ public class Weapon {
     }
     
     private int getDadiFerita(int grade){
-        //Random ran = new Random();
+        Random ran = new Random();
         
         switch(grade){
             case 1:
-                return 2;
+                return ran.nextInt(1,2) ;
             case 2:
-                return 4;
+                return ran.nextInt(3,4);
             case 3:
-                return 6;
+                return ran.nextInt(5,6);
             default:
                 return 0;    
         }
