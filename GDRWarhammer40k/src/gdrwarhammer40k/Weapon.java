@@ -29,9 +29,9 @@ public class Weapon {
         
         switch(grade){
             case 1:
-                return ran.nextInt(1,2) ;
+                return 2 ;
             case 2:
-                return ran.nextInt(3,4);
+                return 4;
             case 3:
                 return ran.nextInt(5,6);
             default:

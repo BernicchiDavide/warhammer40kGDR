@@ -16,7 +16,7 @@ public class GDRWarhammer40k {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Character t = new Terminator(new Weapon(3, "FireGun"), new Armor());
+        Character t = new Terminator(new Weapon(3, "FireGun"), new Armor(3));
         System.out.print(t.outPut());
         System.out.print("\n" + t.attacca());
         

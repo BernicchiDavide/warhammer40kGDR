@@ -10,8 +10,10 @@ package gdrwarhammer40k;
  */
 public class NPC extends Character{
     TypeNpc nome;
-    NPC(Weapon a, Armor at, TypeNpc y){
+    int gradoNemico;
+    NPC(int gN, Weapon a, Armor at, TypeNpc y){
         super(a,at);
         nome = y;
+        gradoNemico = gN;
     }
 }
