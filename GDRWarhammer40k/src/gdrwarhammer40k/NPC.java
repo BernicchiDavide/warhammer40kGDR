@@ -9,11 +9,15 @@ package gdrwarhammer40k;
  * @author bernicchi.davide
  */
 public class NPC extends Character{
-    TypeNpc nome;
+    /*TypeNpc*/String nome;
     int gradoNemico;
-    NPC(int gN, Weapon a, Armor at, TypeNpc y){
-        super(a,at);
+    NPC(int gN, /*TypeNpc y*/String y, Weapon a, Armor at, int vit){
+        super(a,at, vit);
         nome = y;
         gradoNemico = gN;
+    }
+    @Override
+    public String toString(){
+        return "type: " + nome + " grado: " + gradoNemico + " vita: " +vita;
     }
 }

@@ -8,8 +8,11 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public enum TypeNpc {
-    Tyranide,
-    ChaosMarine,
-    Necron  
+public class Assoult extends Character{
+    Assoult(Weapon a, Armor art){
+        super(a,art,75);
+        classe = "Assoult";
+        atributoClasseFireGun = 5; 
+        atributoClasseMelee = -2;
+    }
 }

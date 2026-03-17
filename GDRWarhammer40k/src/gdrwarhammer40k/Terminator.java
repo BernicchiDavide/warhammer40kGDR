@@ -10,7 +10,7 @@ package gdrwarhammer40k;
  */
 public class Terminator extends Character{
     Terminator(Weapon a, Armor art){
-        super(a,art);
+        super(a,art,100);
         classe = "Terminator";
         atributoClasseFireGun = 3; 
         atributoClasseMelee = 0;

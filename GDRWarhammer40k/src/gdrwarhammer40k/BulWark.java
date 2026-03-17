@@ -8,8 +8,11 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public enum TypeNpc {
-    Tyranide,
-    ChaosMarine,
-    Necron  
+public class BulWark extends Character{
+    BulWark(Weapon a, Armor art){
+        super(a, art, 95);
+        classe = "BulWark";
+        atributoClasseFireGun = -5; 
+        atributoClasseMelee = 3;
+    }
 }

@@ -8,8 +8,11 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public enum TypeNpc {
-    Tyranide,
-    ChaosMarine,
-    Necron  
+public class Chaplain extends Character{
+    Chaplain(Weapon a, Armor art){
+        super(a, art, 40);
+       classe = "Chaplain";
+        atributoClasseFireGun = 0; 
+        atributoClasseMelee = 0;
+    }
 }

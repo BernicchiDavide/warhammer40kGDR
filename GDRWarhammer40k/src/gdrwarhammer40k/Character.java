@@ -12,11 +12,13 @@ public class Character {
     String classe;
     Weapon arma;
     Armor armatura;
+    int vita;
     int atributoClasseFireGun;
     int atributoClasseMelee;
     int atributoClasse;
     
-    Character(Weapon arm, Armor armt){
+    Character(Weapon arm, Armor armt, int vit){
+        vita = vit;
         addArma(arm);
         addArmatura(armt);
     }

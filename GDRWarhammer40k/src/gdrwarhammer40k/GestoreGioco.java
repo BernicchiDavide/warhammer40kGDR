@@ -8,8 +8,16 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public enum TypeNpc {
-    Tyranide,
-    ChaosMarine,
-    Necron  
+public class GestoreGioco {
+    Character player;
+    Character npc;
+    
+    
+    void setGiocatore(Character g){
+        player= g;
+    }
+    void setNpc(Character n){
+        npc = n;
+    }
+    
 }
