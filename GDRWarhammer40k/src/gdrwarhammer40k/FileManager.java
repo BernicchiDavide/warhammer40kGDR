@@ -34,7 +34,6 @@ public class FileManager {
             Weapon arma = new Weapon(Integer.valueOf(stats[2]), "melee");
             Armor armatura = new Armor( Integer.valueOf(stats[3]));
             int vita = Integer.parseInt(stats[4]);
-            System.out.print("\n" + ciclo + " ");
             return new NPC(gradoNemico,stats[1], arma, armatura, vita);
 
         }

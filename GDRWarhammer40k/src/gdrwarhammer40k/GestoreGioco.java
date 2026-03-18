@@ -11,7 +11,7 @@ package gdrwarhammer40k;
 public class GestoreGioco {
     Character player;
     Character npc;
-    
+    Dado d;
     
     void setGiocatore(Character g){
         player= g;
@@ -20,4 +20,17 @@ public class GestoreGioco {
         npc = n;
     }
     
+    void gioco(){
+        /*if(d.roll() > 3){
+                
+        }*/
+        boolean fine=true;
+        while(fine == true){
+            player.rollFNP(npc.attacca());
+            npc.rollFNP(player.attacca());
+            fine = player.getStatus();
+            fine = npc.getStatus();
+
+        }
+    }
 }

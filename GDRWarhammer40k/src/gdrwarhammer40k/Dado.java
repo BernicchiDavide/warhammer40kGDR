@@ -13,6 +13,8 @@ import java.util.Random;
 public class Dado {
     int roll(){
         Random ran = new Random();
-        return ran.nextInt(1,6);
+        int output=ran.nextInt(1,6);
+        System.out.print("\n-"+output);
+        return output ;
     }
 }

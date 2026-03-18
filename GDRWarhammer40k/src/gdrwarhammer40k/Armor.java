@@ -14,13 +14,27 @@ import java.util.Random;
 public class Armor {
     int gradeArmor;
     int FNP;
+    Dado d = new Dado();
+    
     
     Armor(int ga){
         gradeArmor =ga;
-        FNP = getDadiFNP(ga);
+        FNP = 6-(ga-1);//getDadiFNP(ga);
     }
     
-    private int getDadiFNP(int grd){
+    boolean rollFNP(){
+
+        if(d.roll() >= FNP){
+                    System.out.print("--feel no pain");
+            System.out.print(" << successo");
+            return true;
+        }            
+                System.out.print("--feel no pain");
+        System.out.print(" << fallimento");
+        return false;
+    }
+    
+    /*private int getDadiFNP(int grd){
         switch(grd){
             case 1:
                 return 6;                
@@ -31,5 +45,5 @@ public class Armor {
             default:
                 return 0;
         }
-    }
+    }*/
 }

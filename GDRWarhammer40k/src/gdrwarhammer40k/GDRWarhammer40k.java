@@ -18,12 +18,12 @@ public class GDRWarhammer40k {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*Character t = new Terminator(new Weapon(3, "FireGun"), new Armor(3));
-        System.out.print(t.outPut());
+        Character t = new Terminator(new Weapon(3, "FireGun"), new Armor(3));
+        /*System.out.print(t.outPut());
         System.out.print("\n" + t.attacca());*/
         
         FileManager fm = new FileManager();
-        System.out.print(fm.getNpc(1));
+        /*System.out.print(fm.getNpc(1));
         System.out.print(fm.getNpc(1));
         System.out.print(fm.getNpc(1));
         System.out.print(fm.getNpc(2));
@@ -31,8 +31,14 @@ public class GDRWarhammer40k {
         System.out.print(fm.getNpc(2));
         System.out.print(fm.getNpc(3));
         System.out.print(fm.getNpc(3));
-        System.out.print(fm.getNpc(3));
+        System.out.print(fm.getNpc(3));*/
         
+        GestoreGioco gg = new GestoreGioco();
+        gg.setNpc(fm.getNpc(1));
+        gg.setGiocatore(t);
+        
+        
+        gg.gioco();
         
 
     }

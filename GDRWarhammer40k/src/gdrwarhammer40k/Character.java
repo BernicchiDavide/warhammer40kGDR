@@ -13,6 +13,7 @@ public class Character {
     Weapon arma;
     Armor armatura;
     int vita;
+    boolean status=true;
     int atributoClasseFireGun;
     int atributoClasseMelee;
     int atributoClasse;
@@ -21,6 +22,10 @@ public class Character {
         vita = vit;
         addArma(arm);
         addArmatura(armt);
+    }
+    
+    boolean getStatus(){
+        return status;
     }
     
     void addArma(Weapon w){
@@ -33,14 +38,28 @@ public class Character {
         }
     }
     void addArmatura(Armor a){
-        
+        armatura=a;
     }
     
-    String outPut(){
-        return "la classe: " + classe + " ha un: " + arma + "+" +  atributoClasse;
+    void rollFNP(int d){
+        int output=0;
+        for(int i =0; i<d; i++){
+            if (!armatura.rollFNP()){
+                output += 1;
+            }
+        }
+        riceviDanni(output);
     }
     
-    String attacca(){
-        return "Danni: " + (arma.getDanno() +atributoClasse);
+    void riceviDanni(int d){
+        vita -= d;
+        if(vita <= 0){
+            status = false;
+        }
+        System.out.print("\nclasse: " + classe + " ha ricevuto: " + d + "danni; ha" + vita + "hp");
+    }
+    
+    int attacca(){
+        return arma.getDanno() + atributoClasse;
     }
 }
