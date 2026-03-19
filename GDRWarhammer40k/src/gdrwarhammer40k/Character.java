@@ -59,6 +59,10 @@ public class Character {
         System.out.print("\nclasse: " + classe + " ha ricevuto: " + d + "danni; ha" + vita + "hp");
     }
     
+    String getWeaponDEF(){
+        return "{" + this.arma.getTipoArma() + " " + this.arma.getDanniArma() + " danni}";
+    }
+    
     int attacca(){
         return arma.getDanno() + atributoClasse;
     }

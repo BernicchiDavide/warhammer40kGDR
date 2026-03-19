@@ -20,14 +20,20 @@ public class GestoreGioco {
         npc = n;
     }
     
-    void gioco(){
+    void NpcEncounter(){
         /*if(d.roll() > 3){
                 
         }*/
+        int rndCounter=0;
         boolean fine=true;
         while(fine == true){
-            player.rollFNP(npc.attacca());
-            npc.rollFNP(player.attacca());
+            rndCounter++;
+            System.out.print("\n<<Round " + rndCounter + ">>");
+            System.out.print("\n-- attacca: " +player + ">>");
+            System.out.print("\n<<Round " + rndCounter + ">>");
+            
+            
+            
             fine = player.getStatus();
             fine = npc.getStatus();
 

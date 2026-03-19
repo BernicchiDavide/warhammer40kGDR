@@ -8,7 +8,7 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public class Assoult extends Character{
+public class Assoult extends SpaceMarine{
     Assoult(Weapon a, Armor art){
         super(a,art,75);
         classe = "Assoult";

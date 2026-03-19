@@ -8,11 +8,14 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public class Chaplain extends SpaceMarine{
-    Chaplain(Weapon a, Armor art){
-        super(a, art, 40);
-       classe = "Chaplain";
-        atributoClasseFireGun = 0; 
-        atributoClasseMelee = 0;
+public class SpaceMarine extends Character {
+    Dado d = new Dado();
+    boolean SF=true;
+    SpaceMarine(Weapon a, Armor art, int v){
+        super(a,art,v);
+    }
+    
+    void weaponSF(){
+        
     }
 }

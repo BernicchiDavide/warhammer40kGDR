@@ -13,14 +13,14 @@ import java.util.Random;
  */
 public class Weapon {
     int grado;
-    String tipoArma;
+    TypeWeapon tipoArma;
     ArrayList<Dado> dadi = new ArrayList<Dado>();
     ArrayList<Integer> rollDadi = new ArrayList<Integer>();
     
     
     Weapon(int g, String tA){
         grado = g;
-        tipoArma= tA;
+        tipoArma= TypeWeapon.valueOf(tA);
         fillDadiFeritaList(getDadiFerita(g));
     }
     
@@ -47,7 +47,11 @@ public class Weapon {
     
     
     String getTipoArma(){
-        return tipoArma;
+        return tipoArma.toString();
+    }
+    
+    String getDanniArma(){
+        return dadi.size() + "-" + dadi.size()*6;
     }
     
     int getDanno(){

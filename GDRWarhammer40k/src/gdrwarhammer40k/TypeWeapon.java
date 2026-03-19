@@ -8,11 +8,10 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public class Chaplain extends SpaceMarine{
-    Chaplain(Weapon a, Armor art){
-        super(a, art, 40);
-       classe = "Chaplain";
-        atributoClasseFireGun = 0; 
-        atributoClasseMelee = 0;
-    }
+public enum TypeWeapon {
+    PlasmaSuperMelta,
+    BoltGun,
+    PowerHammer,
+    CroziusArcanum,
+    Melee
 }

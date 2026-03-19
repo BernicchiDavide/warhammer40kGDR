@@ -8,7 +8,7 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public class BulWark extends Character{
+public class BulWark extends SpaceMarine{
     BulWark(Weapon a, Armor art){
         super(a, art, 95);
         classe = "BulWark";
