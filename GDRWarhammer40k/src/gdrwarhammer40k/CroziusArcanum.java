@@ -8,10 +8,12 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public enum TypeWeapon {
-    PlasmaSuperMelta,
-    BoltGun,
-    PowerHammer,
-    CroziusArcanum,
-    Melee
+public class CroziusArcanum extends Weapon {
+    CroziusArcanum(int g){
+        super(g, "Melee");
+    }
+    @Override
+    int SF(){
+        
+    }
 }

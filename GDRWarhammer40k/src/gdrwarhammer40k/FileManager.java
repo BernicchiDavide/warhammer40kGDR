@@ -30,11 +30,11 @@ public class FileManager {
             String[] stats = linea.split(",");
 
             int gradoNemico =  Integer.parseInt(stats[0]);
-            //TypeNpc tipoNpc = TypeNpc.valueOf(stats[1]);
-            Weapon arma = new Weapon(Integer.valueOf(stats[2]), "melee");
+            TypeNpc tipoNpc = TypeNpc.valueOf(stats[1]);
+            Weapon arma = new Weapon(Integer.valueOf(stats[2]), "Enemy Weapon");
             Armor armatura = new Armor( Integer.valueOf(stats[3]));
             int vita = Integer.parseInt(stats[4]);
-            return new NPC(gradoNemico,stats[1], arma, armatura, vita);
+            return new NPC(gradoNemico,TypeNpc.valueOf(stats[1]), arma, armatura, vita);
 
         }
         catch (IOException e) {

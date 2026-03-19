@@ -8,14 +8,17 @@ package gdrwarhammer40k;
  *
  * @author bernicchi.davide
  */
-public class SpaceMarine extends Character {
-    Dado d = new Dado();
-    boolean SF=true;
-    SpaceMarine(Weapon a, Armor art, int v){
-        super(a,art,v);
+public class BoltGun extends Weapon{
+    BoltGun(int g){
+        super(g, "FireGun");
     }
     
-    void weaponSF(){
-        arma.SF();
+    @Override
+    int SF(){
+        return getDanno()+getDanno()+getDanno();
+    }
+    
+    void colpoAccurato(){
+        
     }
 }

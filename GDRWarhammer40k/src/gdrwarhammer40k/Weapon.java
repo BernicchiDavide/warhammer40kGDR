@@ -13,14 +13,15 @@ import java.util.Random;
  */
 public class Weapon {
     int grado;
-    TypeWeapon tipoArma;
+    Dado d = new Dado();
+    String tipoArma;
     ArrayList<Dado> dadi = new ArrayList<Dado>();
     ArrayList<Integer> rollDadi = new ArrayList<Integer>();
     
     
     Weapon(int g, String tA){
         grado = g;
-        tipoArma= TypeWeapon.valueOf(tA);
+        tipoArma= tA;
         fillDadiFeritaList(getDadiFerita(g));
     }
     
@@ -68,5 +69,9 @@ public class Weapon {
   @Override
     public String toString() {
         return tipoArma +" " + dadi.size() +"D6";
+    }
+
+    int SF() {
+        return 0;
     }
 }
