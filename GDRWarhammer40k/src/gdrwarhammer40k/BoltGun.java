@@ -17,8 +17,4 @@ public class BoltGun extends Weapon{
     int SF(){
         return getDanno()+getDanno()+getDanno();
     }
-    
-    void colpoAccurato(){
-        
-    }
 }

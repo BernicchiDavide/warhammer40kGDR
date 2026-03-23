@@ -9,7 +9,7 @@ package gdrwarhammer40k;
  * @author bernicchi.davide
  */
 public class Terminator extends SpaceMarine{
-    
+    int dmg =0;
     
     Terminator(Weapon a, Armor art){
         super(a,art,100);
@@ -17,28 +17,20 @@ public class Terminator extends SpaceMarine{
         atributoClasseFireGun = 3; 
         atributoClasseMelee = 0;
     }
-    
-    void attivaSF(){
-        boolean surriscaldamento=false;
-        int dmg =0;
+    @Override
+    int attivaSF(){
+        System.out.print("\nTerminator carica il Plasma Supa Melta");
+        int output =0;
         if(d.roll() > 1){
-            attacca();
+            System.out.print("\nTerminator ha colpito");
             dmg++;
+            output += attacca();
         }
         else{
+            System.out.print("\nPlasma Supa Melta si e surriscaldato: Terminator riceve " + dmg*5 + " Danni mortali");
             riceviDanni(dmg*5);
+            dmg =0;
         }
-        
-        /*if(SF == true){
-            while(surriscaldamento == false){
-                if(d.roll() > 1){
-                    attacca();
-                    dmg++;
-                }
-                else{
-                    riceviDanni(dmg*5);
-                }
-            }
-        }*/
+        return output;
     }
 }

@@ -9,13 +9,15 @@ package gdrwarhammer40k;
  * @author bernicchi.davide
  */
 public class SpaceMarine extends Character {
+
+    
     Dado d = new Dado();
     boolean SF=true;
     SpaceMarine(Weapon a, Armor art, int v){
         super(a,art,v);
     }
     
-    void weaponSF(){
-        arma.SF();
+    int attivaSF(){
+        return 0;
     }
 }

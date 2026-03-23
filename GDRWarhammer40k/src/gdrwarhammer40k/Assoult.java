@@ -15,4 +15,10 @@ public class Assoult extends SpaceMarine{
         atributoClasseFireGun = 5; 
         atributoClasseMelee = -2;
     }
+ 
+    @Override
+    int attivaSF(){
+        System.out.print("\nAssoult ha fatto un colpo mirato");
+        return attacca()+attacca()+attacca();
+    }
 }

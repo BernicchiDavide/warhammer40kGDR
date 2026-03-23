@@ -15,4 +15,19 @@ public class Chaplain extends SpaceMarine{
         atributoClasseFireGun = 0; 
         atributoClasseMelee = 0;
     }
+    
+    @Override
+    int attivaSF(){
+        System.out.print("\nChaplain richiede aiuto divino:\n");
+        int successo= d.roll();
+        if (successo >= 3){
+            System.out.print("-Chaplain +D6 tutte le abilita");
+            atributoClasse+=d.roll();
+        }
+        else{
+            System.out.print("-Chaplain ha fallito");
+            this.riceviDanni(10);
+        }
+        return 0;
+    }
 }

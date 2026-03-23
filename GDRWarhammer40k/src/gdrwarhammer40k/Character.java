@@ -18,6 +18,8 @@ public class Character {
     int atributoClasseMelee;
     int atributoClasse;
     
+    
+    
     Character(Weapon arm, Armor armt, int vit){
         vita = vit;
         addArma(arm);
@@ -56,14 +58,15 @@ public class Character {
         if(vita <= 0){
             status = false;
         }
-        System.out.print("\nclasse: " + classe + " ha ricevuto: " + d + "danni; ha" + vita + "hp");
+        System.out.print("\n" + classe + " ha ricevuto: " + d + "danni; ha " + vita + " hp");
     }
     
     String getWeaponDEF(){
-        return "{" + this.arma.getTipoArma() + " " + this.arma.getDanniArma() + " danni}";
+        return "{" + this.arma.getTipoArma() + " " + this.arma.getDanniArma() + " danni +" + atributoClasse+ "}";
     }
     
     int attacca(){
         return arma.getDanno() + atributoClasse;
     }
+    
 }
