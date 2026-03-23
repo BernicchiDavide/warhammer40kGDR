@@ -20,7 +20,7 @@ public class Chaplain extends SpaceMarine{
     int attivaSF(){
         System.out.print("\nChaplain richiede aiuto divino:\n");
         int successo= d.roll();
-        if (successo >= 3){
+        if (successo > 3){
             System.out.print("-Chaplain +D6 tutte le abilita");
             atributoClasse+=d.roll();
         }

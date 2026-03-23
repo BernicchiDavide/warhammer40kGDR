@@ -14,11 +14,13 @@ import java.util.Random;
  * @author bernicchi.davide
  */
 public class FileManager {
-    String file = "FileNemici.csv";
+    Dado d = new Dado();
+    String fileNe = "FileNemici.csv";
+    String fileEv = "FileEventi.csv";
     
     
     Character getNpc(int lvl){
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileNe))) {
             String linea;
             Random ran = new Random();
 
@@ -41,5 +43,28 @@ public class FileManager {
             e.printStackTrace();
         }
         return null;
+    }
+    
+    void getEvento(int lvl){
+        int rollEv = d.roll();
+        
+        if(rollEv > 3){
+            System.out.print("nemico e apparso");
+        }
+        else{
+            int RollWeapon=d.roll();
+            if(RollWeapon == 1){
+                System.out.print("Weapon Upgrade");
+            }
+            else{
+                int RollItem=d.roll();
+                if(RollItem > 3){
+                System.out.print("Found item");
+                }
+                else{
+                System.out.print("ricevuto danno");
+                }
+            }
+        }
     }
 }
