@@ -27,9 +27,6 @@ public class PowerHammer extends Weapon{
     
     @Override
     int SF(){
-        if (ready=true){
-            return powerHit();
-        }
         addCharge();
         return 0;
     }

@@ -14,7 +14,7 @@ public class Dado {
     int roll(){
         Random ran = new Random();
         int output=ran.nextInt(1,6);
-        System.out.print("\n-"+output);
+        System.out.print("\nD6-"+output+"\n");
         return output ;
     }
 }

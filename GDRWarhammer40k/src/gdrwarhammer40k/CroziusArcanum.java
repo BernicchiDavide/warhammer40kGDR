@@ -14,6 +14,6 @@ public class CroziusArcanum extends Weapon {
     }
     @Override
     int SF(){
-        
+        return 0;
     }
 }
