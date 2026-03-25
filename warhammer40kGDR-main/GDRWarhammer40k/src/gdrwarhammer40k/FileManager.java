@@ -59,10 +59,10 @@ public class FileManager {
             else{
                 int RollItem=d.roll();
                 if(RollItem > 3){
-                System.out.print("Found item");
+                    System.out.print("Found item");
                 }
                 else{
-                System.out.print("ricevuto danno");
+                    System.out.print("ricevuto 'down stats'");
                 }
             }
         }

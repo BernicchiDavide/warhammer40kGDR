@@ -69,4 +69,8 @@ public class Character {
         return arma.getDanno() + atributoClasse;
     }
     
+    void upGradeWeapon(){
+        arma.upGrade();
+    }
+    
 }

@@ -24,9 +24,9 @@ public class GDRWarhammer40k {
         SpaceMarine a = new Assoult(new Weapon(2, "BoltGun"), new Armor(2));
         SpaceMarine b = new BulWark(new Weapon(2, "PowerHammer"), new Armor(2));
         
-        fm.getEvento(0);
         
         
+        //fm.getEvento(0);
         /*b.attivaSF();
         System.out.print(b.attacca());
         

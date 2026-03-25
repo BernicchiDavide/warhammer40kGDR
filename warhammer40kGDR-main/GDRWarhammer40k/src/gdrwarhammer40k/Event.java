@@ -9,5 +9,18 @@ package gdrwarhammer40k;
  * @author bernicchi.davide
  */
 public class Event {
+    String message;
+    TypeEvent tipoEvento;
+    int grado=0;
     
+    
+    Event(String msg, TypeEvent tE, int grd){
+        message = msg;
+        tipoEvento = tE;
+        grado = grd;
+    }
+    
+    TypeEvent getTypeEvento(){
+        return tipoEvento;
+    }
 }

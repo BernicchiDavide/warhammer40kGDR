@@ -12,6 +12,8 @@ public class GestoreGioco {
     Character player;
     Character npc;
     Dado d;
+    FileManager fm;
+    
     
     void setGiocatore(Character g){
         player= g;
@@ -20,6 +22,26 @@ public class GestoreGioco {
         npc = n;
     }
     
+    void getEvent(Event ev){
+        switch(ev.getTypeEvento()){
+            case TypeEvent.EnemyEncounter:
+                spawnEnemy();
+            case TypeEvent.FoundItem:
+                GiveItem();
+            case TypeEvent.WeaponUpgrade:
+                upGradeWeapon();
+        }
+    }
+    
+    void spawnEnemy(){
+        setNpc(fm.getNpc(1));
+    }
+    void GiveItem(){
+        //player.addItem(Item i);
+    }
+    void upGradeWeapon(){
+        player.upGradeWeapon();
+    }
     void NpcEncounter(){
         /*if(d.roll() > 3){
                 

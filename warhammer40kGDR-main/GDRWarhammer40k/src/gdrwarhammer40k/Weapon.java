@@ -40,6 +40,11 @@ public class Weapon {
         }
     }
     
+    void upGrade(){
+        grado++;
+    }
+    
+    
     private void fillDadiFeritaList(int n){
         for (int i = 0; i<n; i++){
             dadi.add(new Dado());
