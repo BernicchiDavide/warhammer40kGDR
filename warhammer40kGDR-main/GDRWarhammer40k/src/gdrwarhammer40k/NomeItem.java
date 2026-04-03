@@ -6,11 +6,8 @@ package gdrwarhammer40k;
 
 /**
  *
- * @author bernicchi.davide
+ * @author 39340
  */
-public enum TypeEvento {
-    EncounterEnemy,
-    FoundItem,
-    HealthRelated,
-    WeaponUpGrade
+public class NomeItem {
+    
 }
