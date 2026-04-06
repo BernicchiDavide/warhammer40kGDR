@@ -1,0 +1,3 @@
+Rossi,200
+verdi,621
+Bianchi,100

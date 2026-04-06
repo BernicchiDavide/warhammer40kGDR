@@ -5,6 +5,7 @@
 package gdrwarhammer40k;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
@@ -17,7 +18,7 @@ public class FileManager {
     Dado d = new Dado();
     String fileNe = "FileNemici.csv";
     String fileEv = "FileEventi.csv";
-    
+    String podio = "podio.txt";
     
     Character getNpc(int lvl){
         try (BufferedReader br = new BufferedReader(new FileReader(fileNe))) {
@@ -44,6 +45,18 @@ public class FileManager {
         }
         return null;
     }
+    
+    String readPodio() throws FileNotFoundException, IOException{
+        /*try (BufferedReader br = new BufferedReader(new FileReader(podio))) {
+            /*String[] file = br;
+            for(String linea: br){
+                
+            }
+        }
+        return output;*/
+        return null;
+    }
+    
     
     void getEvento(int lvl){
         int rollEv = d.roll();
