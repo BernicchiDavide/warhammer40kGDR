@@ -8,6 +8,8 @@ package gdrwarhammer40k;
  *
  * @author 39340
  */
-public class GradeItem {
-    
+public enum GradeItem {
+    piccolo,
+    medio,
+    reliquiario
 }

@@ -21,4 +21,6 @@ public class Event {
     TypeEvent getTypeEvento(){
         return tipoEvento;
     }
+    
+
 }

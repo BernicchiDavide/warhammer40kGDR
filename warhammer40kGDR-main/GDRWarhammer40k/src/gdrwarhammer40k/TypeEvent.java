@@ -11,5 +11,6 @@ package gdrwarhammer40k;
 public enum TypeEvent {
     EnemyEncounter,
     FoundItem,
+    StatsDrain,
     WeaponUpgrade
 }

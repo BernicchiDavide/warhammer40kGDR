@@ -9,5 +9,12 @@ package gdrwarhammer40k;
  * @author 39340
  */
 public class Item {
+    NomeItem nome;
+    GradeItem grado;
+    Item(NomeItem n, GradeItem g){
+        nome = n;
+        grado = g;
+    }
+    
     
 }

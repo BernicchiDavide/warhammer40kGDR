@@ -8,6 +8,8 @@ package gdrwarhammer40k;
  *
  * @author 39340
  */
-public class NomeItem {
-    
+public enum NomeItem {
+    EmperorInsignia,
+    EnergySuperCell,
+    PuritySeal
 }
