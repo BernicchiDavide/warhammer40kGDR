@@ -33,30 +33,75 @@ public class SchermataGioco extends javax.swing.JFrame {
     private void initComponents() {
 
         sfondo = new javax.swing.JLabel();
+        ButtonPodio = new javax.swing.JButton();
+        ButtonInizia = new javax.swing.JButton();
+        ButtonCarica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         sfondo.setText("jLabel1");
 
+        ButtonPodio.setText("podio");
+        ButtonPodio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPodioActionPerformed(evt);
+            }
+        });
+
+        ButtonInizia.setText("inizia");
+        ButtonInizia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonIniziaActionPerformed(evt);
+            }
+        });
+
+        ButtonCarica.setText("carica");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(sfondo)
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(241, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonCarica)
+                    .addComponent(ButtonInizia)
+                    .addComponent(ButtonPodio))
+                .addGap(87, 87, 87))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(197, Short.MAX_VALUE)
+                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(ButtonPodio)
+                .addGap(18, 18, 18)
+                .addComponent(ButtonInizia)
+                .addGap(18, 18, 18)
+                .addComponent(ButtonCarica)
+                .addGap(38, 38, 38)
                 .addComponent(sfondo)
                 .addGap(87, 87, 87))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonPodioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPodioActionPerformed
+        // TODO add your handling code here:
+        Podio pd = new Podio();
+        pd.setVisible(true);
+        
+    }//GEN-LAST:event_ButtonPodioActionPerformed
+
+    private void ButtonIniziaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonIniziaActionPerformed
+        // TODO add your handling code here:
+        SchermataInizio si = new SchermataInizio();
+        si.setVisible(true);
+    }//GEN-LAST:event_ButtonIniziaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,6 +139,9 @@ public class SchermataGioco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonCarica;
+    private javax.swing.JButton ButtonInizia;
+    private javax.swing.JButton ButtonPodio;
     private javax.swing.JLabel sfondo;
     // End of variables declaration//GEN-END:variables
 }
