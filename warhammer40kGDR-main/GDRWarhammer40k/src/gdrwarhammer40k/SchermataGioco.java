@@ -92,9 +92,9 @@ public class SchermataGioco extends javax.swing.JFrame {
 
     private void ButtonPodioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPodioActionPerformed
         // TODO add your handling code here:
-        Podio pd = new Podio();
+        /*Podio pd = new Podio();
         pd.setVisible(true);
-        
+        */
     }//GEN-LAST:event_ButtonPodioActionPerformed
 
     private void ButtonIniziaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonIniziaActionPerformed
