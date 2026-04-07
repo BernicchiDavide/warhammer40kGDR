@@ -46,16 +46,7 @@ public class FileManager {
         return null;
     }
     
-    String readPodio() throws FileNotFoundException, IOException{
-        /*try (BufferedReader br = new BufferedReader(new FileReader(podio))) {
-            /*String[] file = br;
-            for(String linea: br){
-                
-            }
-        }
-        return output;*/
-        return null;
-    }
+
     
     
     void getEvento(int lvl){
