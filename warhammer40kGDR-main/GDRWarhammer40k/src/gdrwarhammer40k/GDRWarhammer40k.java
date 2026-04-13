@@ -24,9 +24,9 @@ public class GDRWarhammer40k {
         SpaceMarine a = new Assoult(new Weapon(2, "BoltGun"), new Armor(2));
         SpaceMarine b = new BulWark(new Weapon(2, "PowerHammer"), new Armor(2));
         
-        SchermataGioco sg = new SchermataGioco();
+        Schermata sg = new Schermata();
         sg.setVisible(true);
-        
+        sg.setExtendedState(sg.MAXIMIZED_BOTH);
         
         //fm.getEvento(0);
         /*b.attivaSF();
