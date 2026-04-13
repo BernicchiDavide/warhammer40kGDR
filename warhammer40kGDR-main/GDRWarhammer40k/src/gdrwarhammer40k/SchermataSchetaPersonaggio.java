@@ -4,6 +4,11 @@
  */
 package gdrwarhammer40k;
 
+import java.awt.Color;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author bernicchi.davide
@@ -16,15 +21,53 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
      * Creates new form SchermataSchetaPersonaggio
      */
     public SchermataSchetaPersonaggio() {
-        initComponents();        
-        sfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagini/schelta-personaggio.jpg")));
-        this.AssoultButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagini/Assoult.png")));
-        this.BulWarkButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagini/schelta-personaggio.jpg")));
-        this.ChaplainButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagini/schelta-personaggio.jpg")));
-        this.TerminatorButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagini/Terminator.png")));
+        initComponents();    
+        
+        
+        ImageIcon iconAss = new javax.swing.ImageIcon(getClass().getResource("/imagini/Assoult.png"));
+        Image scaledImgAss = iconAss.getImage().getScaledInstance(302, 239, Image.SCALE_SMOOTH);
+    
+        ImageIcon iconBull = new javax.swing.ImageIcon(getClass().getResource("/imagini/Bulwark.png"));
+        Image scaledImgBull = iconBull.getImage().getScaledInstance(210, 232, Image.SCALE_SMOOTH);
+    
+        ImageIcon iconChap = new javax.swing.ImageIcon(getClass().getResource("/imagini/Chaplain.png"));
+        Image scaledImgChap = iconChap.getImage().getScaledInstance(210, 280, Image.SCALE_SMOOTH);
+    
+        ImageIcon iconTer = new javax.swing.ImageIcon(getClass().getResource("/imagini/Terminator.png"));
+        Image scaledImgTer = iconTer.getImage().getScaledInstance(180, 253, Image.SCALE_SMOOTH);
+    
+        
+        this.setBackground(Color.black);
+        this.AssoultButton.setIcon(new ImageIcon(scaledImgAss));
+        this.BulWarkButton.setIcon(new ImageIcon(scaledImgBull));
+        this.ChaplainButton.setIcon(new ImageIcon(scaledImgChap));
+        this.TerminatorButton.setIcon(new ImageIcon(scaledImgTer));
         this.setContentPane(sfondo);
         sfondo.add(AssoultButton);
         sfondo.add(TerminatorButton);
+        sfondo.add(ChaplainButton);
+        sfondo.add(BulWarkButton);
+        
+        
+                AssoultButton.setOpaque(false);
+        AssoultButton.setContentAreaFilled(false);
+        AssoultButton.setBorderPainted(false);
+        AssoultButton.setFocusPainted(false);        
+        
+        TerminatorButton.setOpaque(false);
+        TerminatorButton.setContentAreaFilled(false);
+        TerminatorButton.setBorderPainted(false);
+        TerminatorButton.setFocusPainted(false);        
+        
+        ChaplainButton.setOpaque(false);
+        ChaplainButton.setContentAreaFilled(false);
+        ChaplainButton.setBorderPainted(false);
+        ChaplainButton.setFocusPainted(false);        
+        
+        BulWarkButton.setOpaque(false);
+        BulWarkButton.setContentAreaFilled(false);
+        BulWarkButton.setBorderPainted(false);
+        BulWarkButton.setFocusPainted(false);
     }
 
     /**
@@ -44,51 +87,65 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        AssoultButton.setText("jButton1");
+        AssoultButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssoultButtonActionPerformed(evt);
+            }
+        });
 
-        TerminatorButton.setText("jButton2");
-
-        ChaplainButton.setText("jButton3");
-
-        BulWarkButton.setText("jButton4");
+        TerminatorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TerminatorButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(sfondo)
-                .addGap(138, 138, 138))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ChaplainButton)
-                    .addComponent(AssoultButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 399, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TerminatorButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BulWarkButton, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(TerminatorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ChaplainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AssoultButton, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(sfondo)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BulWarkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AssoultButton)
-                    .addComponent(TerminatorButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TerminatorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ChaplainButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+                            .addComponent(AssoultButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(BulWarkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(sfondo)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ChaplainButton)
-                    .addComponent(BulWarkButton))
-                .addGap(74, 74, 74))
+                .addGap(207, 207, 207))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TerminatorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerminatorButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TerminatorButtonActionPerformed
+
+    private void AssoultButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssoultButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssoultButtonActionPerformed
 
     /**
      * @param args the command line arguments
