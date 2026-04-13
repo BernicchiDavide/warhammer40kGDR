@@ -4,6 +4,9 @@
  */
 package gdrwarhammer40k;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author 39340
@@ -13,10 +16,26 @@ public class SchermataGioco extends javax.swing.JFrame {
     /**
      * Creates new form SchermataInizio
      */
+        ImageIcon tf = new javax.swing.ImageIcon(getClass().getResource("/imagini/Capillary_Towers.jpg"));
+        Image TyranidFieldIcon = tf.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
+        ImageIcon nhw = new javax.swing.ImageIcon(getClass().getResource("/imagini/Necron-Homeworld.jpg"));
+        Image NecronTombWorldIcon = nhw.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
+        ImageIcon CD = new javax.swing.ImageIcon(getClass().getResource("/imagini/ChaosDomain.png"));
+        Image ChaosDomainIcon = CD.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);
+    
+        
+        ImageIcon TyranidField = new ImageIcon(TyranidFieldIcon);
+        ImageIcon NecronTombWorld = new ImageIcon(NecronTombWorldIcon);
+        ImageIcon ChaosDomain = new ImageIcon(ChaosDomainIcon);
+        
     public SchermataGioco() {
         initComponents();        
-
+        sfondo.setIcon(TyranidField);
+        setContentPane(sfondo);
         
+        sfondo.add(this.Necron);
+        sfondo.add(this.Tyranids);
+        sfondo.add(this.chaos);
     }
 
     /**
@@ -28,21 +47,84 @@ public class SchermataGioco extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        sfondo = new javax.swing.JLabel();
+        Tyranids = new javax.swing.JButton();
+        chaos = new javax.swing.JButton();
+        Necron = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Tyranids.setText("tyranids");
+        Tyranids.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TyranidsActionPerformed(evt);
+            }
+        });
+
+        chaos.setText("Chaos");
+        chaos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chaosActionPerformed(evt);
+            }
+        });
+
+        Necron.setText("Necron");
+        Necron.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NecronActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sfondo)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Necron)
+                    .addComponent(chaos)
+                    .addComponent(Tyranids))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(sfondo)
+                .addGap(31, 31, 31)
+                .addComponent(Tyranids)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chaos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Necron)
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TyranidsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TyranidsActionPerformed
+        // TODO add your handling code here:
+        sfondo.setIcon(TyranidField);
+        setContentPane(sfondo);
+    }//GEN-LAST:event_TyranidsActionPerformed
+
+    private void chaosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaosActionPerformed
+        // TODO add your handling code here:
+        sfondo.setIcon(ChaosDomain);
+        setContentPane(sfondo);
+    }//GEN-LAST:event_chaosActionPerformed
+
+    private void NecronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NecronActionPerformed
+        // TODO add your handling code here:
+        sfondo.setIcon(NecronTombWorld);
+        setContentPane(sfondo);
+    }//GEN-LAST:event_NecronActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,5 +163,9 @@ public class SchermataGioco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Necron;
+    private javax.swing.JButton Tyranids;
+    private javax.swing.JButton chaos;
+    private javax.swing.JLabel sfondo;
     // End of variables declaration//GEN-END:variables
 }

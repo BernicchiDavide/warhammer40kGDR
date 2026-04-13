@@ -535,6 +535,9 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
 
     private void TerminatorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerminatorButtonActionPerformed
         // TODO add your handling code here:
+        SchermataGioco sg = new SchermataGioco();
+        sg.setVisible(true);
+        sg.setExtendedState(sg.MAXIMIZED_BOTH);
     }//GEN-LAST:event_TerminatorButtonActionPerformed
 
     private void AssoultButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssoultButtonActionPerformed
