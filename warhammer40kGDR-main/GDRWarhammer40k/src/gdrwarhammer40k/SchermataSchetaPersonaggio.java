@@ -47,9 +47,35 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         sfondo.add(TerminatorButton);
         sfondo.add(ChaplainButton);
         sfondo.add(BulWarkButton);
+        sfondo.add(this.jLabel1);
+        sfondo.add(this.jLabelArma1);
+        sfondo.add(this.jLabelArmatura1);
+        sfondo.add(this.jLabel4);
+        sfondo.add(this.jLabel5);
+        sfondo.add(this.jLabel6);
+        sfondo.add(this.jLabel7);
+        sfondo.add(this.jLabelArma2);
+        sfondo.add(this.jLabelArmatura2);
+        sfondo.add(this.jLabel10);
+        sfondo.add(this.jLabelArma3);
+        sfondo.add(this.jLabelArmatura3);
+        sfondo.add(this.jLabel13);
+        sfondo.add(this.jLabelArma4);
+        sfondo.add(this.jLabelArmatura4);
+        sfondo.add(this.jLabel20);
+        sfondo.add(this.jLabelPO);
+        sfondo.add(this.jLabelCM);
+        sfondo.add(this.jLabelBI);
+        sfondo.add(this.jLabelCPH);
+        sfondo.add(this.jTextAreaBI);
+        sfondo.add(this.jTextAreaCM);
+        sfondo.add(this.jTextAreaPO);
+        sfondo.add(this.jTextAreaCPH);
+        sfondo.add(this.jTextArea1);
+        sfondo.add(jTextAreaSpiegaArma);
+        sfondo.add(titolo);
         
-        
-                AssoultButton.setOpaque(false);
+        AssoultButton.setOpaque(false);
         AssoultButton.setContentAreaFilled(false);
         AssoultButton.setBorderPainted(false);
         AssoultButton.setFocusPainted(false);        
@@ -68,6 +94,199 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         BulWarkButton.setContentAreaFilled(false);
         BulWarkButton.setBorderPainted(false);
         BulWarkButton.setFocusPainted(false);
+        
+        this.jTextAreaBI.setVisible(false);
+        this.jTextAreaCM.setVisible(false);
+        this.jTextAreaCPH.setVisible(false);
+        this.jTextAreaPO.setVisible(false);
+        this.jTextArea1.setVisible(false);
+        this.jTextAreaSpiegaArma.setVisible(false);
+        //arma
+        this.jLabelArma1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaSpiegaArma.setVisible(true);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaSpiegaArma.setVisible(false); 
+            }
+        }); 
+        this.jLabelArma2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaSpiegaArma.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaSpiegaArma.setVisible(false);
+            }
+        });         
+        this.jLabelArma3.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaSpiegaArma.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaSpiegaArma.setVisible(false); 
+            }
+        }); 
+        this.jLabelArma4.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaSpiegaArma.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaSpiegaArma.setVisible(false);
+            }
+        }); 
+        //FNP
+        this.jLabelArmatura1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextArea1.setVisible(true);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextArea1.setVisible(false); 
+            }
+        }); 
+        this.jLabelArmatura1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextArea1.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextArea1.setVisible(false);
+            }
+        });         
+        this.jLabelArmatura3.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextArea1.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextArea1.setVisible(false); 
+            }
+        }); 
+        this.jLabelArmatura4.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextArea1.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextArea1.setVisible(false);
+            }
+        }); 
+        //Effeti speciali
+        this.jLabelBI.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaBI.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaBI.setVisible(false); 
+            }
+        }); 
+        this.jLabelCM.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaCM.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaCM.setVisible(false); 
+            }
+        }); 
+        this.jLabelCPH.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaCPH.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaCPH.setVisible(false); 
+            }
+        }); 
+        this.jLabelPO.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                jTextAreaPO.setVisible(true); 
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                jTextAreaPO.setVisible(false); 
+            }
+        }); 
+        
+        //schelta personaggio
+        AssoultButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {        
+                AssoultButton.setBorderPainted(true);
+                AssoultButton.setBackground(Color.yellow);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                AssoultButton.setBorderPainted(false);
+                AssoultButton.setText("Carica");
+            }
+        }); 
+        TerminatorButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+                TerminatorButton.setBorderPainted(true);
+                TerminatorButton.setBackground(Color.yellow);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                TerminatorButton.setBorderPainted(false);
+            }
+        }); 
+        ChaplainButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+                ChaplainButton.setBorderPainted(true);
+                ChaplainButton.setBackground(Color.yellow);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                ChaplainButton.setBorderPainted(false);
+            }
+        }); 
+        BulWarkButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+                BulWarkButton.setBorderPainted(true);
+                BulWarkButton.setBackground(Color.yellow);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                BulWarkButton.setBorderPainted(false);
+            }
+        }); 
     }
 
     /**
@@ -84,57 +303,232 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         TerminatorButton = new javax.swing.JButton();
         ChaplainButton = new javax.swing.JButton();
         BulWarkButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabelArma1 = new javax.swing.JLabel();
+        jLabelArmatura1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabelArma2 = new javax.swing.JLabel();
+        jLabelArmatura2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabelArma3 = new javax.swing.JLabel();
+        jLabelArmatura3 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabelArma4 = new javax.swing.JLabel();
+        jLabelArmatura4 = new javax.swing.JLabel();
+        jLabelCM = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaCPH = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaPO = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextAreaBI = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextAreaCM = new javax.swing.JTextArea();
+        jLabelPO = new javax.swing.JLabel();
+        jLabelBI = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabelCPH = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextAreaSpiegaArma = new javax.swing.JTextArea();
+        titolo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(sfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1049, 540, -1, -1));
 
         AssoultButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AssoultButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(AssoultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 236, 284));
 
         TerminatorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TerminatorButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(TerminatorButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 213, 340));
+        getContentPane().add(ChaplainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 213, 284));
+        getContentPane().add(BulWarkButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 130, 256, 284));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(TerminatorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ChaplainButton, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AssoultButton, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(sfondo)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BulWarkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(TerminatorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ChaplainButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
-                            .addComponent(AssoultButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(BulWarkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(sfondo)
-                .addGap(207, 207, 207))
-        );
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel1.setText("Terminator");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 213, -1));
+
+        jLabelArma1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArma1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArma1.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArma1.setText("grado Arma: 3 (DMG 5/6D6) ");
+        getContentPane().add(jLabelArma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 213, -1));
+
+        jLabelArmatura1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArmatura1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArmatura1.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArmatura1.setText("grado Armatura: 3 (FNP 4+)");
+        getContentPane().add(jLabelArmatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 213, -1));
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel4.setText("Effetto speciale:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 213, -1));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel5.setText("Chaplain");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 213, -1));
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel6.setText("Assoult");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, 225, -1));
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel7.setText("BullWark");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, 279, -1));
+
+        jLabelArma2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArma2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArma2.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArma2.setText("grado Arma: 1 (DMG 2D6)");
+        getContentPane().add(jLabelArma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 213, -1));
+
+        jLabelArmatura2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArmatura2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArmatura2.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArmatura2.setText("grado Armatura: 1 (FNP 6+)");
+        getContentPane().add(jLabelArmatura2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 470, 213, -1));
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel10.setText("Effetto speciale:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, 213, -1));
+
+        jLabelArma3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArma3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArma3.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArma3.setText("grado Arma: 2 (DMG 4D6)");
+        getContentPane().add(jLabelArma3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, 213, -1));
+
+        jLabelArmatura3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArmatura3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArmatura3.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArmatura3.setText("grado Armatura: 2 (FNP 5+)");
+        getContentPane().add(jLabelArmatura3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 213, -1));
+
+        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel13.setText("Effetto Speciale");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 550, 213, -1));
+
+        jLabelArma4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArma4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArma4.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArma4.setText("grado Arma: 2 (DMG 4D6)");
+        getContentPane().add(jLabelArma4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, 213, -1));
+
+        jLabelArmatura4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelArmatura4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArmatura4.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelArmatura4.setText("grado Armatura: 2 (FNP 5+)");
+        getContentPane().add(jLabelArmatura4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 470, 213, -1));
+
+        jLabelCM.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelCM.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelCM.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelCM.setText("Colpo Mirato");
+        getContentPane().add(jLabelCM, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, 213, -1));
+
+        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel21.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 204, 51));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 608, 213, -1));
+
+        jTextAreaCPH.setColumns(20);
+        jTextAreaCPH.setRows(5);
+        jTextAreaCPH.setText("\"carica il martello di energia e \nquando attacca scarica tutte le \ncariche\"");
+        jScrollPane1.setViewportView(jTextAreaCPH);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 630, 200, 80));
+
+        jTextAreaPO.setColumns(20);
+        jTextAreaPO.setRows(5);
+        jTextAreaPO.setText("\"fa un attacco che non fa passare \nil turno ma ha una possibilita di \nesplodere e fare danno al\n proprietario\"");
+        jScrollPane2.setViewportView(jTextAreaPO);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, 200, 80));
+
+        jTextAreaBI.setColumns(20);
+        jTextAreaBI.setRows(5);
+        jTextAreaBI.setText("\"aumenta il danno \npermanentemente ma ha una \npossibilita di fare danno al\nproprietario\"");
+        jScrollPane5.setViewportView(jTextAreaBI);
+
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 630, 200, 80));
+
+        jTextAreaCM.setColumns(20);
+        jTextAreaCM.setRows(5);
+        jTextAreaCM.setText("\"fa un attacco 3 volte\"");
+        jScrollPane6.setViewportView(jTextAreaCM);
+
+        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 630, 200, 80));
+
+        jLabelPO.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelPO.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelPO.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelPO.setText("Plasma Overdrive:");
+        getContentPane().add(jLabelPO, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 213, 50));
+
+        jLabelBI.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelBI.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelBI.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelBI.setText("Benedizione dell'imperatore:");
+        getContentPane().add(jLabelBI, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 570, 213, -1));
+
+        jLabel20.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel20.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 204, 51));
+        jLabel20.setText("Effetto Speciale");
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 550, 213, -1));
+
+        jLabelCPH.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelCPH.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelCPH.setForeground(new java.awt.Color(255, 204, 51));
+        jLabelCPH.setText("Carica PowerHammer ");
+        getContentPane().add(jLabelCPH, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 570, 213, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("\"L'armatura tira un D6\nper ogni danno, se fa piu del \nnumero scritto il danno si annulla \n(grd-1 {6+} / grd-2 {5+} / grd-2 {4+})\"");
+        jScrollPane3.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 720, 220, -1));
+
+        jTextAreaSpiegaArma.setColumns(20);
+        jTextAreaSpiegaArma.setRows(5);
+        jTextAreaSpiegaArma.setText("\"Larma tira x dadi caratterizzati\ndal grado, nel risultato viene aggiunto un numero \ncaratteristico di ogni classe\n(grd-1 {2-12} / grd-2 {4-24} / grd-3{5-30 o 6-36})\"");
+        jScrollPane4.setViewportView(jTextAreaSpiegaArma);
+
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 720, 310, -1));
+
+        titolo.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
+        titolo.setForeground(new java.awt.Color(255, 204, 0));
+        titolo.setText("Scegli il personaggio");
+        getContentPane().add(titolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 480, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -177,6 +571,40 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
     private javax.swing.JButton BulWarkButton;
     private javax.swing.JButton ChaplainButton;
     private javax.swing.JButton TerminatorButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelArma1;
+    private javax.swing.JLabel jLabelArma2;
+    private javax.swing.JLabel jLabelArma3;
+    private javax.swing.JLabel jLabelArma4;
+    private javax.swing.JLabel jLabelArmatura1;
+    private javax.swing.JLabel jLabelArmatura2;
+    private javax.swing.JLabel jLabelArmatura3;
+    private javax.swing.JLabel jLabelArmatura4;
+    private javax.swing.JLabel jLabelBI;
+    private javax.swing.JLabel jLabelCM;
+    private javax.swing.JLabel jLabelCPH;
+    private javax.swing.JLabel jLabelPO;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextAreaBI;
+    private javax.swing.JTextArea jTextAreaCM;
+    private javax.swing.JTextArea jTextAreaCPH;
+    private javax.swing.JTextArea jTextAreaPO;
+    private javax.swing.JTextArea jTextAreaSpiegaArma;
     private javax.swing.JLabel sfondo;
+    private javax.swing.JLabel titolo;
     // End of variables declaration//GEN-END:variables
 }
