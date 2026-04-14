@@ -96,9 +96,7 @@ public class SchermataGioco extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Necron, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 107, -1, -1));
-
-        personaggio.setText("jLabel1");
-        getContentPane().add(personaggio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 262, 490, 350));
+        getContentPane().add(personaggio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 560, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

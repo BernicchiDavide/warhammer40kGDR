@@ -24,16 +24,16 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
     
     GestoreGioco gg;        
         ImageIcon iconAss = new javax.swing.ImageIcon(getClass().getResource("/imagini/Assoult.png"));
-        Image scaledImgAss = iconAss.getImage().getScaledInstance(302, 239, Image.SCALE_SMOOTH);
+        Image scaledImgAss = iconAss.getImage().getScaledInstance(330, 260, Image.SCALE_SMOOTH);
     
         ImageIcon iconBull = new javax.swing.ImageIcon(getClass().getResource("/imagini/Bulwark.png"));
-        Image scaledImgBull = iconBull.getImage().getScaledInstance(210, 232, Image.SCALE_SMOOTH);
+        Image scaledImgBull = iconBull.getImage().getScaledInstance(240, 330, Image.SCALE_SMOOTH);
     
         ImageIcon iconChap = new javax.swing.ImageIcon(getClass().getResource("/imagini/Chaplain.png"));
-        Image scaledImgChap = iconChap.getImage().getScaledInstance(210, 280, Image.SCALE_SMOOTH);
+        Image scaledImgChap = iconChap.getImage().getScaledInstance(240, 310, Image.SCALE_SMOOTH);
     
         ImageIcon iconTer = new javax.swing.ImageIcon(getClass().getResource("/imagini/Terminator.png"));
-        Image scaledImgTer = iconTer.getImage().getScaledInstance(180, 253, Image.SCALE_SMOOTH);
+        Image scaledImgTer = iconTer.getImage().getScaledInstance(200, 270, Image.SCALE_SMOOTH);
     
     
     public SchermataSchetaPersonaggio() {
@@ -354,14 +354,14 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
                 AssoultButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(AssoultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 260, 284));
+        getContentPane().add(AssoultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 290, 284));
 
         TerminatorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TerminatorButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(TerminatorButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 220, 280));
+        getContentPane().add(TerminatorButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 220, 280));
 
         ChaplainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -375,7 +375,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
                 BulWarkButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(BulWarkButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 256, 284));
+        getContentPane().add(BulWarkButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 280, 360));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
@@ -452,7 +452,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel13.setText("Effetto Speciale");
+        jLabel13.setText("Effetto Speciale:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 550, 213, -1));
 
         jLabelArma4.setBackground(new java.awt.Color(255, 255, 255));
@@ -509,19 +509,19 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         jLabelPO.setBackground(new java.awt.Color(255, 255, 255));
         jLabelPO.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabelPO.setForeground(new java.awt.Color(255, 204, 51));
-        jLabelPO.setText("Plasma Overdrive:");
+        jLabelPO.setText("Plasma Overdrive");
         getContentPane().add(jLabelPO, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 550, 213, 50));
 
         jLabelBI.setBackground(new java.awt.Color(255, 255, 255));
         jLabelBI.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabelBI.setForeground(new java.awt.Color(255, 204, 51));
-        jLabelBI.setText("Benedizione dell'imperatore:");
+        jLabelBI.setText("Benedizione dell'imperatore");
         getContentPane().add(jLabelBI, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 570, 213, -1));
 
         jLabel20.setBackground(new java.awt.Color(255, 255, 255));
         jLabel20.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel20.setText("Effetto Speciale");
+        jLabel20.setText("Effetto Speciale:");
         getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 550, 213, -1));
 
         jLabelCPH.setBackground(new java.awt.Color(255, 255, 255));
