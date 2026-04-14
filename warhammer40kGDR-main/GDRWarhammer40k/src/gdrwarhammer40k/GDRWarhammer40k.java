@@ -19,12 +19,11 @@ public class GDRWarhammer40k {
      */
     public static void main(String[] args) {
         FileManager fm = new FileManager();
-        SpaceMarine t = new Terminator(new Weapon(3, "PlasmaSuperMelta"), new Armor(3));
-        SpaceMarine c = new Chaplain(new Weapon(1, "CroziusArcanum"), new Armor(1));
-        SpaceMarine a = new Assoult(new Weapon(2, "BoltGun"), new Armor(2));
-        SpaceMarine b = new BulWark(new Weapon(2, "PowerHammer"), new Armor(2));
+
+        GestoreGioco gg = new GestoreGioco();
         
-        Schermata s = new Schermata();
+        
+        Schermata s = new Schermata(gg);
         s.setVisible(true);
         s.setExtendedState(s.MAXIMIZED_BOTH);
         

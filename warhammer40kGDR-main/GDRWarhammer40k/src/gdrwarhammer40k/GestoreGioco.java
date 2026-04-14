@@ -14,6 +14,13 @@ public class GestoreGioco {
     Dado d;
     FileManager fm;
     
+    Character getGiocatore(){
+        return player;
+    }
+    
+    Character getNPC(){
+        return npc;
+    }
     
     void setGiocatore(Character g){
         player= g;

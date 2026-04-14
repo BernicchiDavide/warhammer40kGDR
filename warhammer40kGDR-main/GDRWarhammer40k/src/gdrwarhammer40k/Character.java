@@ -9,6 +9,9 @@ package gdrwarhammer40k;
  * @author bernicchi.davide
  */
 public class Character {
+    String imgFile;
+    int alt;
+    int lar;
     String classe;
     Weapon arma;
     Armor armatura;
@@ -26,8 +29,29 @@ public class Character {
         addArmatura(armt);
     }
     
+
+    
     boolean getStatus(){
         return status;
+    }
+    
+    void setImgFile (String imf){
+        imgFile = imf;
+    }
+    void setAlt(int y){
+        alt = y;
+    }
+    void setLar(int x){
+        lar = x;
+    }
+    String getImgFile(){
+        return imgFile;
+    }
+    int getAlt(){
+        return alt;
+    }
+    int getLar(){
+        return lar;
     }
     
     void addArma(Weapon w){

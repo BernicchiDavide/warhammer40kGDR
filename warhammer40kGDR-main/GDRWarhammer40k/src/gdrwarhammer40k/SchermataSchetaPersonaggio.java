@@ -20,10 +20,9 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
     /**
      * Creates new form SchermataSchetaPersonaggio
      */
-    public SchermataSchetaPersonaggio() {
-        initComponents();    
-        
-        
+    
+    
+    GestoreGioco gg;        
         ImageIcon iconAss = new javax.swing.ImageIcon(getClass().getResource("/imagini/Assoult.png"));
         Image scaledImgAss = iconAss.getImage().getScaledInstance(302, 239, Image.SCALE_SMOOTH);
     
@@ -35,6 +34,14 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
     
         ImageIcon iconTer = new javax.swing.ImageIcon(getClass().getResource("/imagini/Terminator.png"));
         Image scaledImgTer = iconTer.getImage().getScaledInstance(180, 253, Image.SCALE_SMOOTH);
+    
+    
+    public SchermataSchetaPersonaggio(GestoreGioco gegio) {
+        gg = gegio;
+        initComponents();    
+        
+        
+
     
         
         this.setBackground(Color.black);
@@ -535,7 +542,12 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
 
     private void TerminatorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerminatorButtonActionPerformed
         // TODO add your handling code here:
-        SchermataGioco sg = new SchermataGioco();
+        Terminator termin = new Terminator(new Weapon(3, "firegun"), new Armor(3));
+        termin.setImgFile("/imagini/Assoult.png");
+        termin.setAlt(this.scaledImgTer.getHeight(rootPane));
+        termin.setLar(this.scaledImgTer.getWidth(rootPane));
+        gg.setGiocatore(termin);
+        SchermataGioco sg = new SchermataGioco(gg);
         sg.setVisible(true);
         sg.setExtendedState(sg.MAXIMIZED_BOTH);
     }//GEN-LAST:event_TerminatorButtonActionPerformed
@@ -566,7 +578,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new SchermataSchetaPersonaggio().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new SchermataSchetaPersonaggio(new GestoreGioco()).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

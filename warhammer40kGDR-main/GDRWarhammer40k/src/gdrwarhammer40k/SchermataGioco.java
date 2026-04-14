@@ -16,6 +16,10 @@ public class SchermataGioco extends javax.swing.JFrame {
     /**
      * Creates new form SchermataInizio
      */
+        
+    
+        GestoreGioco gg;
+        
         ImageIcon tf = new javax.swing.ImageIcon(getClass().getResource("/imagini/Capillary_Towers.jpg"));
         Image TyranidFieldIcon = tf.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
         ImageIcon nhw = new javax.swing.ImageIcon(getClass().getResource("/imagini/Necron-Homeworld.jpg"));
@@ -28,8 +32,13 @@ public class SchermataGioco extends javax.swing.JFrame {
         ImageIcon NecronTombWorld = new ImageIcon(NecronTombWorldIcon);
         ImageIcon ChaosDomain = new ImageIcon(ChaosDomainIcon);
         
-    public SchermataGioco() {
-        initComponents();        
+    public SchermataGioco(GestoreGioco gegio) {
+        initComponents();  
+        ImageIcon playerSrc = new javax.swing.ImageIcon(getClass().getResource(gg.getGiocatore().getImgFile()));
+        Image playerImgScale = playerSrc.getImage().getScaledInstance(gg.getGiocatore().getLar(), gg.getGiocatore().getAlt(),  Image.SCALE_SMOOTH); 
+        ImageIcon player = new ImageIcon(playerImgScale);
+        personaggio.setIcon(player);
+        
         sfondo.setIcon(TyranidField);
         setContentPane(sfondo);
         
@@ -51,6 +60,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         Tyranids = new javax.swing.JButton();
         chaos = new javax.swing.JButton();
         Necron = new javax.swing.JButton();
+        personaggio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,6 +85,8 @@ public class SchermataGioco extends javax.swing.JFrame {
             }
         });
 
+        personaggio.setText("jLabel1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -89,7 +101,9 @@ public class SchermataGioco extends javax.swing.JFrame {
                     .addComponent(Necron)
                     .addComponent(chaos)
                     .addComponent(Tyranids))
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(personaggio, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +116,11 @@ public class SchermataGioco extends javax.swing.JFrame {
                 .addComponent(chaos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Necron)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(personaggio, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -157,7 +175,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SchermataGioco().setVisible(true);
+                new SchermataGioco(new GestoreGioco()).setVisible(true);
             }
         });
     }
@@ -166,6 +184,7 @@ public class SchermataGioco extends javax.swing.JFrame {
     private javax.swing.JButton Necron;
     private javax.swing.JButton Tyranids;
     private javax.swing.JButton chaos;
+    private javax.swing.JLabel personaggio;
     private javax.swing.JLabel sfondo;
     // End of variables declaration//GEN-END:variables
 }
