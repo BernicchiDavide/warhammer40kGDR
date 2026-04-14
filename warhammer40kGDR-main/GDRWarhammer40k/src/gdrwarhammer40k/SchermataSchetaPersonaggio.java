@@ -36,8 +36,8 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         Image scaledImgTer = iconTer.getImage().getScaledInstance(180, 253, Image.SCALE_SMOOTH);
     
     
-    public SchermataSchetaPersonaggio(GestoreGioco gegio) {
-        gg = gegio;
+    public SchermataSchetaPersonaggio() {
+
         initComponents();    
         
         
@@ -354,16 +354,28 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
                 AssoultButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(AssoultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 236, 284));
+        getContentPane().add(AssoultButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 260, 284));
 
         TerminatorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TerminatorButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(TerminatorButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 213, 340));
-        getContentPane().add(ChaplainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 213, 284));
-        getContentPane().add(BulWarkButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 130, 256, 284));
+        getContentPane().add(TerminatorButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 220, 280));
+
+        ChaplainButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChaplainButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ChaplainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 230, 284));
+
+        BulWarkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BulWarkButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BulWarkButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 256, 284));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
@@ -372,10 +384,10 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 213, -1));
 
         jLabelArma1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelArma1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArma1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabelArma1.setForeground(new java.awt.Color(255, 204, 51));
-        jLabelArma1.setText("grado Arma: 3 (DMG 5/6D6) ");
-        getContentPane().add(jLabelArma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 213, -1));
+        jLabelArma1.setText("Plasma SupaMelta: 3 (DMG 5/6D6) ");
+        getContentPane().add(jLabelArma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 213, 30));
 
         jLabelArmatura1.setBackground(new java.awt.Color(255, 255, 255));
         jLabelArmatura1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -405,13 +417,13 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 204, 51));
         jLabel7.setText("BullWark");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, 279, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 279, -1));
 
         jLabelArma2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelArma2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabelArma2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabelArma2.setForeground(new java.awt.Color(255, 204, 51));
-        jLabelArma2.setText("grado Arma: 1 (DMG 2D6)");
-        getContentPane().add(jLabelArma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 213, -1));
+        jLabelArma2.setText("Crozius Arcanum: 1 (DMG 2D6)");
+        getContentPane().add(jLabelArma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 213, 30));
 
         jLabelArmatura2.setBackground(new java.awt.Color(255, 255, 255));
         jLabelArmatura2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -428,8 +440,8 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         jLabelArma3.setBackground(new java.awt.Color(255, 255, 255));
         jLabelArma3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabelArma3.setForeground(new java.awt.Color(255, 204, 51));
-        jLabelArma3.setText("grado Arma: 2 (DMG 4D6)");
-        getContentPane().add(jLabelArma3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, 213, -1));
+        jLabelArma3.setText("BoltGun: 2 (DMG 4D6)");
+        getContentPane().add(jLabelArma3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, 213, 30));
 
         jLabelArmatura3.setBackground(new java.awt.Color(255, 255, 255));
         jLabelArmatura3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -446,8 +458,8 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         jLabelArma4.setBackground(new java.awt.Color(255, 255, 255));
         jLabelArma4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabelArma4.setForeground(new java.awt.Color(255, 204, 51));
-        jLabelArma4.setText("grado Arma: 2 (DMG 4D6)");
-        getContentPane().add(jLabelArma4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, 213, -1));
+        jLabelArma4.setText("Power Hammer: 2 (DMG 4D6)");
+        getContentPane().add(jLabelArma4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, 213, 30));
 
         jLabelArmatura4.setBackground(new java.awt.Color(255, 255, 255));
         jLabelArmatura4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -468,24 +480,24 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
 
         jTextAreaCPH.setColumns(20);
         jTextAreaCPH.setRows(5);
-        jTextAreaCPH.setText("\"carica il martello di energia e \nquando attacca scarica tutte le \ncariche\"");
+        jTextAreaCPH.setText("\"carica il martello di energia (x3 attacchi) \n indefinivamente e quando attacca scarica\n tutte le cariche in un unico colpo\"");
         jScrollPane1.setViewportView(jTextAreaCPH);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 630, 200, 80));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 630, 250, 100));
 
         jTextAreaPO.setColumns(20);
         jTextAreaPO.setRows(5);
-        jTextAreaPO.setText("\"fa un attacco che non fa passare \nil turno ma ha una possibilita di \nesplodere e fare danno al\n proprietario\"");
+        jTextAreaPO.setText("\"fa un attacco che non fa passare il turno\n ma ha una possibilita(1/6) di esplodere\n e fare danno al proprietario\n(ogni colpo a segno aggiunge 5 danni\n all'esplosione)\"");
         jScrollPane2.setViewportView(jTextAreaPO);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, 200, 80));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, 230, 100));
 
         jTextAreaBI.setColumns(20);
         jTextAreaBI.setRows(5);
-        jTextAreaBI.setText("\"aumenta il danno \npermanentemente ma ha una \npossibilita di fare danno al\nproprietario\"");
+        jTextAreaBI.setText("\"aumenta il danno permanentemente(+1D6) \n ma ha una possibilita (50%) di fare danno al\nproprietario (2D6)\"");
         jScrollPane5.setViewportView(jTextAreaBI);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 630, 200, 80));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 630, 250, 100));
 
         jTextAreaCM.setColumns(20);
         jTextAreaCM.setRows(5);
@@ -523,14 +535,14 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         jTextArea1.setText("\"L'armatura tira un D6\nper ogni danno, se fa piu del \nnumero scritto il danno si annulla \n(grd-1 {6+} / grd-2 {5+} / grd-2 {4+})\"");
         jScrollPane3.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 720, 220, -1));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 750, 220, -1));
 
         jTextAreaSpiegaArma.setColumns(20);
         jTextAreaSpiegaArma.setRows(5);
         jTextAreaSpiegaArma.setText("\"Larma tira x dadi caratterizzati\ndal grado, nel risultato viene aggiunto un numero \ncaratteristico di ogni classe\n(grd-1 {2-12} / grd-2 {4-24} / grd-3{5-30 o 6-36})\"");
         jScrollPane4.setViewportView(jTextAreaSpiegaArma);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 720, 310, -1));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 750, 310, -1));
 
         titolo.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
         titolo.setForeground(new java.awt.Color(255, 204, 0));
@@ -542,20 +554,62 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
 
     private void TerminatorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerminatorButtonActionPerformed
         // TODO add your handling code here:
-        Terminator termin = new Terminator(new Weapon(3, "firegun"), new Armor(3));
-        termin.setImgFile("/imagini/Assoult.png");
-        termin.setAlt(this.scaledImgTer.getHeight(rootPane));
-        termin.setLar(this.scaledImgTer.getWidth(rootPane));
-        gg.setGiocatore(termin);
-        SchermataGioco sg = new SchermataGioco(gg);
+        Terminator player = new Terminator(new Weapon(3, "Plasma SupaMelta"), new Armor(3));
+        player.setImgFile("/imagini/Terminator.png");
+        player.setAlt(this.scaledImgTer.getHeight(rootPane));
+        player.setLar(this.scaledImgTer.getWidth(rootPane));
+        gg.setGiocatore(player);
+        SchermataGioco sg = new SchermataGioco();
+        sg.setGG(gg);
+        sg.startRound();
         sg.setVisible(true);
         sg.setExtendedState(sg.MAXIMIZED_BOTH);
     }//GEN-LAST:event_TerminatorButtonActionPerformed
 
     private void AssoultButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssoultButtonActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
+        Assoult player = new Assoult(new Weapon(2, "Bolt Gun"), new Armor(2));
+        player.setImgFile("/imagini/Assoult.png");
+        player.setAlt(this.scaledImgAss.getHeight(rootPane));
+        player.setLar(this.scaledImgAss.getWidth(rootPane));
+        gg.setGiocatore(player);
+        SchermataGioco sg = new SchermataGioco();
+        sg.setGG(gg);
+        sg.startRound();
+        sg.setVisible(true);
+        sg.setExtendedState(sg.MAXIMIZED_BOTH);
     }//GEN-LAST:event_AssoultButtonActionPerformed
 
+    private void ChaplainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChaplainButtonActionPerformed
+        // TODO add your handling code here:
+        Chaplain player = new Chaplain(new Weapon(1, "Melee"), new Armor(1));
+        player.setImgFile("/imagini/Chaplain.png");
+        player.setAlt(this.scaledImgChap.getHeight(rootPane));
+        player.setLar(this.scaledImgChap.getWidth(rootPane));
+        gg.setGiocatore(player);
+        SchermataGioco sg = new SchermataGioco();
+        sg.setGG(gg);
+        sg.startRound();
+        sg.setVisible(true);
+        sg.setExtendedState(sg.MAXIMIZED_BOTH);
+    }//GEN-LAST:event_ChaplainButtonActionPerformed
+
+    private void BulWarkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BulWarkButtonActionPerformed
+        // TODO add your handling code here:Chaplainù
+        BulWark player = new BulWark(new Weapon(2, "Melee"), new Armor(2));
+        player.setImgFile("/imagini/Bulwark.png");
+        player.setAlt(this.scaledImgBull.getHeight(rootPane));
+        player.setLar(this.scaledImgBull.getWidth(rootPane));
+        gg.setGiocatore(player);
+        SchermataGioco sg = new SchermataGioco();
+        sg.setGG(gg);
+        sg.startRound();
+        sg.setVisible(true);
+        sg.setExtendedState(sg.MAXIMIZED_BOTH);
+    }//GEN-LAST:event_BulWarkButtonActionPerformed
+    void setGG(GestoreGioco gegio){
+        gg = gegio;
+    }
     /**
      * @param args the command line arguments
      */
@@ -578,7 +632,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new SchermataSchetaPersonaggio(new GestoreGioco()).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new SchermataSchetaPersonaggio().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

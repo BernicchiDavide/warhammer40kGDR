@@ -26,7 +26,7 @@ public class Chaplain extends SpaceMarine{
         }
         else{
             System.out.print("-Chaplain ha fallito");
-            this.riceviDanni(10);
+            this.riceviDanni(d.roll() + d.roll());
         }
         return 0;
     }

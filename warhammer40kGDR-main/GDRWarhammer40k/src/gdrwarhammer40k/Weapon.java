@@ -21,7 +21,7 @@ public class Weapon {
     
     Weapon(int g, String tA){
         grado = g;
-        tipoArma= tA;
+        tipoArma = tA;
         fillDadiFeritaList(getDadiFerita(g));
     }
     

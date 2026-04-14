@@ -23,7 +23,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         ImageIcon tf = new javax.swing.ImageIcon(getClass().getResource("/imagini/Capillary_Towers.jpg"));
         Image TyranidFieldIcon = tf.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
         ImageIcon nhw = new javax.swing.ImageIcon(getClass().getResource("/imagini/Necron-Homeworld.jpg"));
-        Image NecronTombWorldIcon = nhw.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
+        Image NecronTombWorldIcon = nhw.getImage().getScaledInstance(1400, 700,  Image.SCALE_SMOOTH);        
         ImageIcon CD = new javax.swing.ImageIcon(getClass().getResource("/imagini/ChaosDomain.png"));
         Image ChaosDomainIcon = CD.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);
     
@@ -32,10 +32,13 @@ public class SchermataGioco extends javax.swing.JFrame {
         ImageIcon NecronTombWorld = new ImageIcon(NecronTombWorldIcon);
         ImageIcon ChaosDomain = new ImageIcon(ChaosDomainIcon);
         
-    public SchermataGioco(GestoreGioco gegio) {
+    public SchermataGioco() {
         initComponents();  
+
+    }
+    void startRound(){
         ImageIcon playerSrc = new javax.swing.ImageIcon(getClass().getResource(gg.getGiocatore().getImgFile()));
-        Image playerImgScale = playerSrc.getImage().getScaledInstance(gg.getGiocatore().getLar(), gg.getGiocatore().getAlt(),  Image.SCALE_SMOOTH); 
+        Image playerImgScale = playerSrc.getImage().getScaledInstance(gg.getGiocatore().getLar()*3/2, gg.getGiocatore().getAlt()*3/2,  Image.SCALE_SMOOTH); 
         ImageIcon player = new ImageIcon(playerImgScale);
         personaggio.setIcon(player);
         
@@ -45,8 +48,12 @@ public class SchermataGioco extends javax.swing.JFrame {
         sfondo.add(this.Necron);
         sfondo.add(this.Tyranids);
         sfondo.add(this.chaos);
+        sfondo.add(this.personaggio);
     }
 
+    void setGG(GestoreGioco gegio){
+        gg = gegio;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,6 +70,8 @@ public class SchermataGioco extends javax.swing.JFrame {
         personaggio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(sfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 6, -1, -1));
 
         Tyranids.setText("tyranids");
         Tyranids.addActionListener(new java.awt.event.ActionListener() {
@@ -70,6 +79,7 @@ public class SchermataGioco extends javax.swing.JFrame {
                 TyranidsActionPerformed(evt);
             }
         });
+        getContentPane().add(Tyranids, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 37, -1, -1));
 
         chaos.setText("Chaos");
         chaos.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +87,7 @@ public class SchermataGioco extends javax.swing.JFrame {
                 chaosActionPerformed(evt);
             }
         });
+        getContentPane().add(chaos, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 72, -1, -1));
 
         Necron.setText("Necron");
         Necron.addActionListener(new java.awt.event.ActionListener() {
@@ -84,44 +95,10 @@ public class SchermataGioco extends javax.swing.JFrame {
                 NecronActionPerformed(evt);
             }
         });
+        getContentPane().add(Necron, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 107, -1, -1));
 
         personaggio.setText("jLabel1");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(sfondo)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Necron)
-                    .addComponent(chaos)
-                    .addComponent(Tyranids))
-                .addGap(50, 50, 50)
-                .addComponent(personaggio, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(sfondo)
-                .addGap(31, 31, 31)
-                .addComponent(Tyranids)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(chaos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Necron)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
-                .addComponent(personaggio, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        getContentPane().add(personaggio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 262, 490, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -171,11 +148,11 @@ public class SchermataGioco extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
+        GestoreGioco gamman = new GestoreGioco();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SchermataGioco(new GestoreGioco()).setVisible(true);
+                new SchermataGioco().setVisible(true);
             }
         });
     }

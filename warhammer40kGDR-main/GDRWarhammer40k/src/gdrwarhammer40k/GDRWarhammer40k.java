@@ -23,7 +23,8 @@ public class GDRWarhammer40k {
         GestoreGioco gg = new GestoreGioco();
         
         
-        Schermata s = new Schermata(gg);
+        Schermata s = new Schermata();
+        s.setGG(gg);
         s.setVisible(true);
         s.setExtendedState(s.MAXIMIZED_BOTH);
         

@@ -17,7 +17,7 @@ public class BulWark extends SpaceMarine{
         atributoClasseFireGun = -5; 
         atributoClasseMelee = 3;
     }
-        void reSetCharge(){
+    void reSetCharge(){
         charge=1;
     }
     
@@ -31,6 +31,7 @@ public class BulWark extends SpaceMarine{
         for (int i =0; i< charge; i++){
             output += arma.getDanno() + atributoClasse;
         }
+        reSetCharge();
         return output;
     }
     @Override

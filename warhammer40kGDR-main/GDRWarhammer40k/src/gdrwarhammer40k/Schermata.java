@@ -17,9 +17,10 @@ public class Schermata extends javax.swing.JFrame {
      * Creates new form SchermataGioco
      */
         GestoreGioco gg;
-    
-    public Schermata(GestoreGioco gegio) {
+    void setGG(GestoreGioco gegio){
         gg = gegio;
+    }
+    public Schermata() {
         initComponents();
         //ImageIcon icon = new ImageIcon("sfondo-iniziale.png");
         sfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagini/sfondo-iniziale.png")));
@@ -123,7 +124,8 @@ public class Schermata extends javax.swing.JFrame {
 
     private void ButtonIniziaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonIniziaActionPerformed
         // TODO add your handling code here:
-        SchermataSchetaPersonaggio s = new SchermataSchetaPersonaggio(gg);
+        SchermataSchetaPersonaggio s = new SchermataSchetaPersonaggio();
+        s.setGG(gg);
         s.setVisible(true);
         s.setSize(1039, 658);
     }//GEN-LAST:event_ButtonIniziaActionPerformed
@@ -159,7 +161,7 @@ public class Schermata extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Schermata(new GestoreGioco()).setVisible(true);
+                new Schermata().setVisible(true);
             }
         });
     }
