@@ -23,7 +23,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         ImageIcon tf = new javax.swing.ImageIcon(getClass().getResource("/imagini/Capillary_Towers.jpg"));
         Image TyranidFieldIcon = tf.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
         ImageIcon nhw = new javax.swing.ImageIcon(getClass().getResource("/imagini/Necron-Homeworld.jpg"));
-        Image NecronTombWorldIcon = nhw.getImage().getScaledInstance(1400, 700,  Image.SCALE_SMOOTH);        
+        Image NecronTombWorldIcon = nhw.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
         ImageIcon CD = new javax.swing.ImageIcon(getClass().getResource("/imagini/ChaosDomain.png"));
         Image ChaosDomainIcon = CD.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);
     
@@ -68,6 +68,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         chaos = new javax.swing.JButton();
         Necron = new javax.swing.JButton();
         personaggio = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -96,7 +97,10 @@ public class SchermataGioco extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Necron, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 107, -1, -1));
-        getContentPane().add(personaggio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 560, 490));
+        getContentPane().add(personaggio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 560, 490));
+
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(797, 270, 390, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -159,6 +163,7 @@ public class SchermataGioco extends javax.swing.JFrame {
     private javax.swing.JButton Necron;
     private javax.swing.JButton Tyranids;
     private javax.swing.JButton chaos;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel personaggio;
     private javax.swing.JLabel sfondo;
     // End of variables declaration//GEN-END:variables
