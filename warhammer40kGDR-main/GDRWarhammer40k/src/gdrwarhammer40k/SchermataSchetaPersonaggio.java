@@ -22,7 +22,8 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
      */
     
     
-    GestoreGioco gg;        
+    GestoreGioco gg;  
+    FileManager fm;
         ImageIcon iconAss = new javax.swing.ImageIcon(getClass().getResource("/imagini/Assoult.png"));
         Image scaledImgAss = iconAss.getImage().getScaledInstance(330, 260, Image.SCALE_SMOOTH);
     
@@ -561,6 +562,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         gg.setGiocatore(player);
         SchermataGioco sg = new SchermataGioco();
         sg.setGG(gg);
+        sg.setFileManager(fm);
         sg.startRound();
         sg.setVisible(true);
         sg.setExtendedState(sg.MAXIMIZED_BOTH);
@@ -575,6 +577,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         gg.setGiocatore(player);
         SchermataGioco sg = new SchermataGioco();
         sg.setGG(gg);
+        sg.setFileManager(fm);
         sg.startRound();
         sg.setVisible(true);
         sg.setExtendedState(sg.MAXIMIZED_BOTH);
@@ -589,6 +592,7 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         gg.setGiocatore(player);
         SchermataGioco sg = new SchermataGioco();
         sg.setGG(gg);
+        sg.setFileManager(fm);
         sg.startRound();
         sg.setVisible(true);
         sg.setExtendedState(sg.MAXIMIZED_BOTH);
@@ -603,12 +607,16 @@ public class SchermataSchetaPersonaggio extends javax.swing.JFrame {
         gg.setGiocatore(player);
         SchermataGioco sg = new SchermataGioco();
         sg.setGG(gg);
+        sg.setFileManager(fm);
         sg.startRound();
         sg.setVisible(true);
         sg.setExtendedState(sg.MAXIMIZED_BOTH);
     }//GEN-LAST:event_BulWarkButtonActionPerformed
     void setGG(GestoreGioco gegio){
         gg = gegio;
+    }
+    void setFileManager(FileManager faMa){
+        fm = faMa;
     }
     /**
      * @param args the command line arguments

@@ -19,6 +19,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         
     
         GestoreGioco gg;
+        FileManager fm;
         
         ImageIcon tf = new javax.swing.ImageIcon(getClass().getResource("/imagini/Capillary_Towers.jpg"));
         Image TyranidFieldIcon = tf.getImage().getScaledInstance(1600, 900,  Image.SCALE_SMOOTH);        
@@ -54,6 +55,9 @@ public class SchermataGioco extends javax.swing.JFrame {
     void setGG(GestoreGioco gegio){
         gg = gegio;
     }
+    void setFileManager(FileManager FiMa){
+        fm = FiMa;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -68,7 +72,7 @@ public class SchermataGioco extends javax.swing.JFrame {
         chaos = new javax.swing.JButton();
         Necron = new javax.swing.JButton();
         personaggio = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        incontro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,8 +103,8 @@ public class SchermataGioco extends javax.swing.JFrame {
         getContentPane().add(Necron, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 107, -1, -1));
         getContentPane().add(personaggio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 560, 490));
 
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(797, 270, 390, 530));
+        incontro.setText("jLabel1");
+        getContentPane().add(incontro, new org.netbeans.lib.awtextra.AbsoluteConstraints(797, 270, 390, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -163,7 +167,7 @@ public class SchermataGioco extends javax.swing.JFrame {
     private javax.swing.JButton Necron;
     private javax.swing.JButton Tyranids;
     private javax.swing.JButton chaos;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel incontro;
     private javax.swing.JLabel personaggio;
     private javax.swing.JLabel sfondo;
     // End of variables declaration//GEN-END:variables

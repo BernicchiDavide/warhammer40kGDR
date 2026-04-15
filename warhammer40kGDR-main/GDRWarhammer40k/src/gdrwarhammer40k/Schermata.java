@@ -17,8 +17,12 @@ public class Schermata extends javax.swing.JFrame {
      * Creates new form SchermataGioco
      */
         GestoreGioco gg;
+        FileManager fm;
     void setGG(GestoreGioco gegio){
         gg = gegio;
+    }
+    void setFileManager(FileManager faMa){
+        fm = faMa;
     }
     public Schermata() {
         initComponents();

@@ -25,6 +25,7 @@ public class GDRWarhammer40k {
         
         Schermata s = new Schermata();
         s.setGG(gg);
+        s.setFileManager(fm);
         s.setVisible(true);
         s.setExtendedState(s.MAXIMIZED_BOTH);
         
